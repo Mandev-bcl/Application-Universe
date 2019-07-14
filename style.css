@@ -1,3 +1,146 @@
+/*! minireset.css v0.0.5 | MIT License | github.com/jgthms/minireset.css */
+html, body, p, ol, ul, li, dl, dt, dd, blockquote, figure, fieldset, legend, textarea, pre, iframe, hr, h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+}
 
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+
+ul {
+  list-style: none;
+}
+
+button, input, select, textarea {
+  margin: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+img, video {
+  height: auto;
+  max-width: 100%;
+}
+
+iframe {
+  border: 0;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td, th {
+  padding: 0;
+  text-align: left;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* HEADER */
+html, body {
+  padding-left: 200px;
+  padding-right: 200px;
+  margin: 0;
+  background-color: #eeeeee;
+}
+
+header {
+  padding: 0;
+}
+
+nav-color {
+  border-color: transparent;
+}
+
+#search1 {
+  display: block;
+  border-radius: 20px;
+}
+
+nav a {
+  color: #69C;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+nav a:hover {
+  color: #F60;
+  transition: all 0.3s;
+}
+
+input {
+  outline: none;
+}
+
+input[type=search] {
+  font-family: inherit;
+  font-size: 100%;
+  -webkit-appearance: textfield;
+  box-sizing: content-box;
+}
+
+input::-webkit-search-decoration,
+input::-webkit-search-cancel-button {
+  display: none;
+}
+
+input:-moz-placeholder {
+  color: #fff;
+}
+
+input::-webkit-input-placeholder {
+  color: #fff;
+}
+
+#mainsearch input[type=search] {
+  width: 15px;
+  color: transparent;
+  cursor: pointer;
+  background: #ededed url(https://static.tumblr.com/ftv85bp/MIXmud4tx/search-icon.png) no-repeat 10px center;
+  border: solid 1px #ccc;
+  padding: 9px 12px 9px 10px;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+#mainsearch input[type=search]:hover {
+  background-color: #56a5d3;
+}
+
+#mainsearch input[type=search]:focus {
+  width: 130px;
+  color: #000;
+  cursor: auto;
+  background: #fff url(https://static.tumblr.com/ftv85bp/MIXmud4tx/search-icon.png) no-repeat 124px center;
+}
+
+#mainsearch input:-moz-placeholder {
+  color: transparent;
+}
+
+#mainsearch input::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.centrer {
+  margin: auto;
+  padding-top: 10px;
+  display: block;
+}
 
 /*# sourceMappingURL=style.css.map */
