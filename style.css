@@ -44,16 +44,13 @@ td, th {
   text-align: left;
 }
 
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
+img {
+  border: 0.3mm black solid;
+  box-shadow: 1px 1px 10px grey;
 }
 
-/* HEADER */
+/* HEADER - NAVIGATION */
 html, body {
-  padding-left: 200px;
-  padding-right: 200px;
   margin: 0;
   background-color: #eeeeee;
 }
@@ -76,7 +73,6 @@ nav a {
   text-decoration: none;
   transition: all 0.3s;
 }
-
 nav a:hover {
   color: #F60;
   transition: all 0.3s;
@@ -117,11 +113,9 @@ input::-webkit-input-placeholder {
   -moz-transition: all 0.5s;
   transition: all 0.5s;
 }
-
 #mainsearch input[type=search]:hover {
   background-color: #56a5d3;
 }
-
 #mainsearch input[type=search]:focus {
   width: 130px;
   color: #000;
@@ -137,10 +131,34 @@ input::-webkit-input-placeholder {
   color: transparent;
 }
 
+.fax {
+  font-size: 23px;
+}
+
+.notif-marge {
+  font-size: 22px;
+  padding-left: 10px;
+}
+
+.notif-new-old {
+  font-size: 12px;
+  padding-left: 20px;
+  text-transform: uppercase;
+}
+
+.dropdown-menu {
+  width: 70vh;
+}
+
 .centrer {
   margin: auto;
-  padding-top: 10px;
   display: block;
+  width: 800px;
+  height: 600px;
+}
+
+.couverture {
+  z-index: 0;
 }
 
 /*# sourceMappingURL=style.css.map */

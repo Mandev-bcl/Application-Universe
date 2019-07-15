@@ -1,16 +1,14 @@
 @import "libs/reset";
 @import "libs/responsive";
-*,
-*::before,
-*::after
-{
-    box-sizing: border-box;
+
+img{
+  border: .3mm black solid;
+  box-shadow: 1px 1px 10px grey;
 }
-/* HEADER */
+
+/* HEADER - NAVIGATION */
 
     html, body{
-        padding-left: 200px;
-        padding-right: 200px;
         margin: 0;
         background-color: rgb(238, 238, 238);
     }
@@ -31,13 +29,11 @@
         color: #69C;
         text-decoration: none;
         transition: all .3s;
+        &:hover {
+          color: #F60;
+          transition: all .3s;
+        }
       }
-      
-      nav a:hover {
-        color: #F60;
-        transition: all .3s;
-      }
-      
       input {
         outline: none;
       }
@@ -72,19 +68,17 @@
         -webkit-transition: all .5s;
         -moz-transition: all .5s;
         transition: all .5s;
+        &:hover {
+          background-color: rgb(86, 165, 211);
+        }
+        &:focus {
+          width: 130px;
+          color: #000;
+          cursor: auto;
+          background: #fff url(https://static.tumblr.com/ftv85bp/MIXmud4tx/search-icon.png) no-repeat 124px center;
+        }
       }
-      
-      #mainsearch input[type=search]:hover {
-        background-color: rgb(86, 165, 211);
-      }
-      
-      #mainsearch input[type=search]:focus {
-        width: 130px;
-        color: #000;
-        cursor: auto;
-        background: #fff url(https://static.tumblr.com/ftv85bp/MIXmud4tx/search-icon.png) no-repeat 124px center;
-      }
-      
+    
       #mainsearch input:-moz-placeholder {
         color: transparent;
       }
@@ -93,8 +87,30 @@
         color: transparent;
       }
 
+      .fax{
+        font-size: 23px;
+      }
+      
+      .notif-marge{
+        font-size: 22px;
+        padding-left: 10px;
+      }
+
+      .notif-new-old{
+        font-size: 12px;
+        padding-left: 20px;
+        text-transform: uppercase;
+      }
+      .dropdown-menu{
+        width: 70vh;
+      }
     .centrer {
         margin: auto;
-        padding-top: 10px;
         display: block;
+        width: 800px;
+        height: 600px;
+      }
+
+      .couverture{
+        z-index: 0;
       }
