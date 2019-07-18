@@ -49,7 +49,6 @@ img {
   box-shadow: 1px 1px 10px grey;
 }
 
-/* HEADER - NAVIGATION */
 html, body {
   margin: 0;
   background-color: #eeeeee;
@@ -107,7 +106,7 @@ input::-webkit-input-placeholder {
   color: transparent;
   cursor: pointer;
   background: #ededed url(https://static.tumblr.com/ftv85bp/MIXmud4tx/search-icon.png) no-repeat 10px center;
-  border: solid 1px #ccc;
+  border: solid 2px #ccc;
   padding: 9px 12px 9px 10px;
   -webkit-transition: all 0.5s;
   -moz-transition: all 0.5s;
@@ -150,15 +149,49 @@ input::-webkit-input-placeholder {
   width: 70vh;
 }
 
-.centrer {
-  margin: auto;
-  display: block;
-  width: 800px;
-  height: 600px;
+.setting-size {
+  width: 15vh;
 }
 
 .couverture {
   z-index: 0;
+  margin: auto;
+  display: block;
+  width: 900px;
+  height: 500px;
+}
+
+.menu-couverture {
+  background: #eeeeee;
+  height: 75px;
+  margin: auto;
+  width: 96vh;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.menu-profil {
+  border-bottom: 0.1mm solid lightgray;
+}
+.menu-profil:hover {
+  border-bottom: 1mm solid #ffae82;
+}
+
+#photo-profil {
+  border: 2mm solid white;
+  display: block;
+  margin: -75px 0px 0px 45px;
+  width: 150px;
+  height: 150px;
+}
+
+.pseudo-profil {
+  margin: auto;
+  margin-left: 20vh;
+}
+
+nav ul li h2 {
+  font-size: 30px;
 }
 
 /*# sourceMappingURL=style.css.map */
