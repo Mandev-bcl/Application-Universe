@@ -136,7 +136,12 @@ a{
       height: 50px;
       border-radius: 50px;
       }
-
+       .nav-accueil{
+         border-right: .3mm grey solid;
+         border-left: .3mm grey solid;
+         padding-left: 15px;
+         padding-right: 20px;
+       }
       .navigation-btn{
         font-weight: bolder;
         color: rgba(255, 255, 255, 0.555);
@@ -411,6 +416,11 @@ button > span {
       cursor: pointer;
     }
 
+    .menu-mobile{
+      display: flex;
+      flex-direction: row;
+      
+    }
     //VERSION MOBIL - PAGE ACCUEIL
 
     .card-size-fil{

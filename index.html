@@ -10,7 +10,8 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
     <script defer src="https://use.fontawesome.com/releases/v5.1.1/js/all.js" integrity="sha384-BtvRZcyfv4r0x/phJt9Y9HhnN5ur1Z+kZbKVgzVBAlQZX4jvAuImlIz+bG7TS00a" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
-    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="sass/style.scss">
 
     <!--SCRIPT JS-->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -37,9 +38,9 @@
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-primary" aria-controls="navbar-primary" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse sticky-top" id="navbar-primary">
+            <div class="collapse navbar-collapse sticky-top row" id="navbar-primary">
               <div class="navbar-collapse-header">
-                <div class="row">
+                <div>
                   <div class="col-6 collapse-close">
                     <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-primary" aria-controls="navbar-primary" aria-expanded="false" aria-label="Toggle navigation">
                       <span></span>
@@ -50,11 +51,11 @@
               </div>
               <ul class="navbar-nav ml-lg-auto">
                 <li class="mt-1 mr-3">
-                  <a href="#" class="text-decoration-none navigation-btn"><img src="/image/Luffy.jpg" alt="Luffy" style="max-width: 30px;" class="mr-2 rounded-circle img">Luffy</a>
+                  <a href="#" class="text-decoration-none navigation-btn"><img src="image/Luffy.jpg" alt="Luffy" style="max-width: 30px;" class="mr-2 rounded-circle img">Luffy</a>
                 </li>
 
                 <li class="mt-2">
-                  <a href="acceuil.html" class="text-decoration-none navigation-btn border-left border-right pl-3 pr-3">Accueil</a>
+                  <a href="acceuil.html" class="text-decoration-none navigation-btn nav-accueil">Accueil</a>
                 </li>
 
                 <li class="nav-item">
@@ -74,7 +75,7 @@
                       <div class="dropdown-divider"></div>
 
                       <div class="alert alert-dark fade show" role="alert">
-                          <img src="/image/Midoriya.jpg" class="photo-profil-notif rounded-circle mr-3 img"><strong>Midoriya Izuku</strong> à ajouté une nouvelle photo.
+                          <img src="image/Midoriya.jpg" class="photo-profil-notif rounded-circle mr-3 img"><strong>Midoriya Izuku</strong> à ajouté une nouvelle photo.
                           <button type="button" class="close" data-dismiss="alert" aria-label="Close" id="popin">
                             <span aria-hidden="true">&times;</span>
                           </button>
@@ -83,13 +84,13 @@
                       <h6 class="text-muted notif-new-old">ancien</h6>
                     <div class="dropdown-divider"></div>
                     <div class="alert alert-dismissible fade show" role="alert">
-                        <img src="/image/Trafalgar D. Water Law.jpg" alt="Trafalgar" class="photo-profil-notif rounded-circle mr-3 img">Vous avez une nouvelle suggestion d'ami:<strong> Trafalgar D. Water Law.</strong>
+                        <img src="image/Trafalgar D. Water Law.jpg" alt="Trafalgar" class="photo-profil-notif rounded-circle mr-3 img">Vous avez une nouvelle suggestion d'ami:<strong> Trafalgar D. Water Law.</strong>
                         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                           <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
                     <div class="alert alert-dismissible fade show" role="alert">
-                          <img src="/image/Sabo Profil.png" alt="Sabo" class="photo-profil-notif rounded-circle mr-3 img"><strong>Sabo</strong> à mentionné votre nom dans un commentaire.<img src="/image/Luffy sabo ace.jpg" alt="luffy sabo ace" style="max-width: 100px;" class="ml-3 img">
+                          <img src="image/Sabo Profil.png" alt="Sabo" class="photo-profil-notif rounded-circle mr-3 img"><strong>Sabo</strong> à mentionné votre nom dans un commentaire.<img src="image/Luffy sabo ace.jpg" alt="luffy sabo ace" style="max-width: 100px;" class="ml-3 img">
                           <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                           </button>
@@ -120,7 +121,7 @@
           <h5 class="modal-title mx-auto" id="exampleModalLabel">Au revoir</h5>
         </div>
         <div class="modal-body text-center">
-            Merci de nous avoir visité n'hésitez pas à aller visiter mon site internet <strong><a href="https://mbdev.dev" class="text-decoration-none">www.mbdev.dev</a></strong>
+            Merci de nous avoir visité n'hésitez pas à aller visiter mon site internet <strong><a href="https://mbdev.dev" target="_blank" class="text-decoration-none">www.mbdev.dev</a></strong>
         </div>
         </div>
       </div>
@@ -142,12 +143,12 @@
 
         <!-- PHOTO COUVERTURE -->
 <section>
-    <img class="couverture" src="/image/luffy_ace_sabo_poster.jpg" data-target="#photoCouverture" data-toggle="modal" alt="Luffy & famille">
+    <img class="couverture" src="image/luffy_ace_sabo_poster.jpg" data-target="#photoCouverture" data-toggle="modal" alt="Luffy & famille">
     <div class="modal fade" id="photoCouverture" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
           <div class="modal-content">
             <div class="modal-body">
-                <img src="/image/luffy_ace_sabo_poster.jpg" alt="Luffy & famille">
+                <img src="image/luffy_ace_sabo_poster.jpg" alt="Luffy & famille">
             </div>
           </div>
         </div>
@@ -280,12 +281,12 @@
                     </div><br>
                     <div class="card-body row">
                       <div class="col-md-3 mt-3">
-                        <img src="/image/Equipage Luffy.jpg" alt="Equipage Luffy" class="galery-photos img" data-target="#photoEquipage" data-toggle="modal">
+                        <img src="image/Equipage Luffy.jpg" alt="Equipage Luffy" class="galery-photos img" data-target="#photoEquipage" data-toggle="modal">
                         <div class="modal fade" id="photoEquipage" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                             <div class="modal-dialog modal-dialog-centered" role="document">
                               <div class="modal-content">
                                 <div class="modal-body">
-                                    <img src="/image/Equipage Luffy.jpg" alt="Luffy & famille">
+                                    <img src="image/Equipage Luffy.jpg" alt="Luffy & famille">
                                 </div>
                               </div>
                             </div>
@@ -293,12 +294,12 @@
                       </div>
 
                       <div class="col-md-3 mt-3">
-                        <img src="/image/lucy.jpg" alt="Lucy" class="galery-photos img" data-target="#photoLucy" data-toggle="modal">
+                        <img src="image/lucy.jpg" alt="Lucy" class="galery-photos img" data-target="#photoLucy" data-toggle="modal">
                         <div class="modal fade" id="photoLucy" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                             <div class="modal-dialog modal-dialog-centered" role="document">
                               <div class="modal-content">
                                 <div class="modal-body">
-                                    <img src="/image/lucy.jpg" alt="Luffy & famille">
+                                    <img src="image/lucy.jpg" alt="Luffy & famille">
                                 </div>
                               </div>
                             </div>
@@ -306,12 +307,12 @@
                       </div>
 
                       <div class="col-md-3 mt-3">
-                        <img src="/image/Luffy sous la neige.jpg" alt="Luffy sous la neige" class="galery-photos img" data-target="#photoLuffyNeige" data-toggle="modal">
+                        <img src="image/Luffy sous la neige.jpg" alt="Luffy sous la neige" class="galery-photos img" data-target="#photoLuffyNeige" data-toggle="modal">
                         <div class="modal fade" id="photoLuffyNeige" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                             <div class="modal-dialog modal-dialog-centered" role="document">
                               <div class="modal-content">
                                 <div class="modal-body">
-                                    <img src="/image/Luffy sous la neige.jpg" alt="Luffy & famille">
+                                    <img src="image/Luffy sous la neige.jpg" alt="Luffy & famille">
                                 </div>
                               </div>
                             </div>
@@ -319,12 +320,12 @@
                       </div>
 
                       <div class="col-md-3 mt-3">
-                        <img src="/image/Luffy sabo ace.jpg" alt="Ace Luffy Sabo" class="galery-photos img" data-target="#photoLSA" data-toggle="modal">
+                        <img src="image/Luffy sabo ace.jpg" alt="Ace Luffy Sabo" class="galery-photos img" data-target="#photoLSA" data-toggle="modal">
                         <div class="modal fade" id="photoLSA" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                             <div class="modal-dialog modal-dialog-centered" role="document">
                               <div class="modal-content">
                                 <div class="modal-body">
-                                    <img src="/image/Luffy sabo ace.jpg" alt="Luffy & famille">
+                                    <img src="image/Luffy sabo ace.jpg" alt="Luffy & famille">
                                 </div>
                               </div>
                             </div>

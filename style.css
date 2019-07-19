@@ -183,6 +183,13 @@ input::-webkit-input-placeholder {
   border-radius: 50px;
 }
 
+.nav-accueil {
+  border-right: 0.3mm grey solid;
+  border-left: 0.3mm grey solid;
+  padding-left: 15px;
+  padding-right: 20px;
+}
+
 .navigation-btn {
   font-weight: bolder;
   color: rgba(255, 255, 255, 0.555);
@@ -455,6 +462,11 @@ button > span {
     height: 200px;
     width: 350px;
     cursor: pointer;
+  }
+
+  .menu-mobile {
+    display: flex;
+    flex-direction: row;
   }
 
   .card-size-fil {
