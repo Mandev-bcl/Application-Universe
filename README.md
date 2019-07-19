@@ -1,18 +1,19 @@
 # Réseau Social : UNIVERSE
 
-Bienvenue sur mon Projet D'application, Universe.
+Bienvenue sur mon Projet D'application "Universe".
 
 Je vais détailler ici les différentes étapes de mon projet:
 
 
-1 - Mise en place des technologie et préparation des dossiers
+1 - Mise en place des technologies et préparation des dossiers
 
-2 - Création de la page "Profil" (arrivé sur About) avec bandeau de navigation.
+2 - Création de la page "Profil" (A propos) avec bandeau de navigation.
 
-3 - Création de la partie "Post" (File d'actualité).
+3 - Ajout des notification et Popin du Profil.
+[le Popin doit être cacher une fois la notifications fermer.]
 
-4 - Ajout des Popin du Profil.
-
+4 - Création de la partie "Accueil" (File d'actualité).
+[Qui s'étend pour en voir plus]
 
 
 A ajouté si Possible :

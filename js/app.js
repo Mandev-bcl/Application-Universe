@@ -1,10 +1,21 @@
+$(function(){
+  $('[data-toggle="tooltip"]').tooltip()
+});
+
 $(document).ready(function(){
-    var search = $('#search');
-    search.focusin(function(){
-      $('#search-bar').css('max-width', '470px');
-    });
-    
-    search.focusout(function(){
-      $('#search-bar').css('max-width', '460px');
-    });
+  $('#popin').click(function(){
+    $('code').hide();
+  });
+});
+
+$(document).ready(function(){
+  $('#showMore').ready(function(){
+    $('.voir').hide();
+  });
+});
+
+$(document).ready(function(){
+  $('#showMore').click(function(){
+    $('.voir').show("3000")
+  });
 });

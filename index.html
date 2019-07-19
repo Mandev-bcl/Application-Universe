@@ -17,17 +17,16 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="js/app.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
   </head>
 
   <body>
 
-<header>
+<header class="sticky-top">
        <!-- BARRE DE NAVIGATION -->
-      <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top rounded-bottom">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-violet rounded-bottom">
           <div class="container">
             <a class="navbar-brand" href="#">
-                <img src="image/UUnivers 50x50.jpg" class="rounded-circle">
+                <img src="image/UUnivers 50x50.jpg" class="rounded-circle img">
             </a>
             <div id="search1">
                 <form id="mainsearch">
@@ -38,7 +37,7 @@
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-primary" aria-controls="navbar-primary" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbar-primary">
+            <div class="collapse navbar-collapse sticky-top" id="navbar-primary">
               <div class="navbar-collapse-header">
                 <div class="row">
                   <div class="col-6 collapse-close">
@@ -50,94 +49,307 @@
                 </div>
               </div>
               <ul class="navbar-nav ml-lg-auto">
-                <li class="nav-item">
-                  <a class="nav-link" href="#"><i class="fas fa-user-friends fax"></i></a>
+                <li class="mt-1 mr-3">
+                  <a href="#" class="text-decoration-none navigation-btn"><img src="/image/Luffy.jpg" alt="Luffy" style="max-width: 30px;" class="mr-2 rounded-circle img">Luffy</a>
                 </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#"><i class="fab fa-facebook-messenger fax"></i></a>
+
+                <li class="mt-2">
+                  <a href="acceuil.html" class="text-decoration-none navigation-btn border-left border-right pl-3 pr-3">Accueil</a>
                 </li>
+
+                <li class="nav-item">
+                  <a class="nav-link" href="#" data-toggle="tooltip" data-placement="top" title="Amis"><i class="fas fa-user-friends fax"></i></a>
+                </li>
+
+                <li class="nav-item">
+                  <a class="nav-link" href="#" data-toggle="tooltip" data-placement="top" title="Messages"><i class="fab fa-facebook-messenger fax"></i></a>
+                </li>
+
                 <li class="nav-item dropdown">
-                  <a class="nav-link" href="#" id="navbar-primary_dropdown_1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-bell fax" aria-hidden="true"></i></a>
+                  <a class="nav-link" href="#" id="navbar-primary_dropdown_1" role="button" data-toggle="dropdown" title="Notifications" aria-haspopup="true" aria-expanded="false"><i class="fa fa-bell fax" aria-hidden="true"></i><code class="red-popin"></code></a>
                   <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbar-primary_dropdown_1">
                       <h4 class="mt-2 mb-2 ml-2 notif-marge">Notifications</h4>
                       <div class="dropdown-divider"></div>
                       <h6 class="text-muted notif-new-old">nouveau</h6>
                       <div class="dropdown-divider"></div>
-                      <div class="alert alert-dark alert-dismissible fade show" role="alert">
-                          <strong>Holy guacamole!</strong> You should check in on some of those fields below.
-                          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+
+                      <div class="alert alert-dark fade show" role="alert">
+                          <img src="/image/Midoriya.jpg" class="photo-profil-notif rounded-circle mr-3 img"><strong>Midoriya Izuku</strong> à ajouté une nouvelle photo.
+                          <button type="button" class="close" data-dismiss="alert" aria-label="Close" id="popin">
                             <span aria-hidden="true">&times;</span>
                           </button>
                         </div>
                     <div class="dropdown-divider"></div>
                       <h6 class="text-muted notif-new-old">ancien</h6>
                     <div class="dropdown-divider"></div>
-                    <div class="alert alert-light alert-dismissible fade show" role="alert">
-                        <strong>Holy guacamole!</strong> You should check in on some of those fields below.
+                    <div class="alert alert-dismissible fade show" role="alert">
+                        <img src="/image/Trafalgar D. Water Law.jpg" alt="Trafalgar" class="photo-profil-notif rounded-circle mr-3 img">Vous avez une nouvelle suggestion d'ami:<strong> Trafalgar D. Water Law.</strong>
                         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                           <span aria-hidden="true">&times;</span>
                         </button>
-                      </div>
-                      <div class="alert alert-light alert-dismissible fade show" role="alert">
-                          <strong>Holy guacamole!</strong> You should check in on some of those fields below.
+                    </div>
+                    <div class="alert alert-dismissible fade show" role="alert">
+                          <img src="/image/Sabo Profil.png" alt="Sabo" class="photo-profil-notif rounded-circle mr-3 img"><strong>Sabo</strong> à mentionné votre nom dans un commentaire.<img src="/image/Luffy sabo ace.jpg" alt="luffy sabo ace" style="max-width: 100px;" class="ml-3 img">
                           <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                           </button>
-                        </div>
+                    </div>
                         <div class="dropdown-divider"></div>
                     <a class="dropdown-item text-center" href="#">Voir tout</a>
                   </div>
                 </li>
 
                   <li class="nav-item dropdown">
-                    <a class="nav-link" href="#" id="navbar-primary_dropdown_2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-sliders-h fax" data-toggle="tooltip"></i></a>
+                    <a class="nav-link" href="#" title="Paramètres" id="navbar-primary_dropdown_2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-sliders-h fax" data-toggle="tooltip"></i></a>
                     <div class="dropdown-menu dropdown-menu-left setting-size" aria-labelledby="btnGroupDrop1">
+                        <a class="dropdown-item" href="#" data-toggle="modal" data-target="#aPropos">&Agrave; propos</a>
                         <a class="dropdown-item" href="#">Paramètres</a>
-                        <a class="dropdown-item" href="#">Déconnexion</a>
+                        <a class="dropdown-item" href="#" data-toggle="modal" data-target="#Deco">Déconnexion</a>
                   </li>
               </ul>
             </div>
           </div>
+          </div>
         </nav>
-        <!-- FIN BARRE DE NAVIGATION -->
-
 </header>
 
+<div class="modal fade" id="Deco" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title mx-auto" id="exampleModalLabel">Au revoir</h5>
+        </div>
+        <div class="modal-body text-center">
+            Merci de nous avoir visité n'hésitez pas à aller visiter mon site internet <strong><a href="https://mbdev.dev" class="text-decoration-none">www.mbdev.dev</a></strong>
+        </div>
+        </div>
+      </div>
+    </div>
+
+<div class="modal fade" id="aPropos" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title mx-auto" id="exampleModalLabel">Bienvenue</h5>
+        </div>
+        <div class="modal-body text-center">
+          Bienvenue sur <b>Universe</b> le réseau social spécialement conçu pour les héros de mangas !
+        </div>
+        </div>
+      </div>
+    </div>
+        <!-- FIN BARRE DE NAVIGATION -->
+
+        <!-- PHOTO COUVERTURE -->
 <section>
-    <img class="couverture" src="/image/luffy_ace_sabo_poster.jpg" alt="Luffy">
-    <nav class="row text-center menu-couverture">
+    <img class="couverture" src="/image/luffy_ace_sabo_poster.jpg" data-target="#photoCouverture" data-toggle="modal" alt="Luffy & famille">
+    <div class="modal fade" id="photoCouverture" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-body">
+                <img src="/image/luffy_ace_sabo_poster.jpg" alt="Luffy & famille">
+            </div>
+          </div>
+        </div>
+      </div>
+        <!-- FIN PHOTO COUVERTURE -->
+
+        <!-- PHOTO ET MENU PROFIL -->
+    <nav class="row text-center menu-couverture col-12">
         <ul class="row">
           <li>
-              <img id="photo-profil" src="image/Luffy.jpg" alt="">
+              <img id="photo-profil" src="image/Luffy.jpg" alt="Luffy" data-target="#photoProfil" data-toggle="modal">
+              <div class="modal fade" id="photoProfil" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                      <div class="modal-body">
+                          <img src="image/Luffy.jpg">
+                      </div>
+                    </div>
+                  </div>
+                </div>
           </li>
           <li class="pseudo-profil">
               <h2>Monkey D. Luffy</h2>
           </li>
         </ul>
       
-        <ul class="col-12 nav mb-3 mt-2" id="pills-tab" role="tablist">
+        <ul class="col-12 nav mb-4 mt-2" id="pills-tab" role="tablist">
             <li class="nav-item col-3 menu-profil">
-              <a class="nav-link" id="pills-propos-tab" data-toggle="pill" href="#pills-propos" role="tab" aria-controls="pills-propos" aria-selected="true">&Agrave; propos</a>
+              <a class="nav-link mt-2 mb-3" id="pills-propos-tab" data-toggle="pill" href="#pills-propos" role="tab" aria-controls="pills-propos" aria-selected="true">&Agrave; propos </a>
             </li>
             <li class="nav-item col-3 menu-profil">
-              <a class="nav-link" id="pills-amis-tab" data-toggle="pill" href="#pills-amis" role="tab" aria-controls="pills-amis" aria-selected="false">1200 <br> Amis</a>
+              <a class="nav-link mt-2 mb-3" id="pills-amis-tab" data-toggle="pill" href="#pills-amis" role="tab" aria-controls="pills-amis" aria-selected="false">Amis</a>
             </li>
             <li class="nav-item col-3 menu-profil">
-              <a class="nav-link" id="pills-abonnes-tab" data-toggle="pill" href="#pills-abonnes" role="tab" aria-controls="pills-abonnes" aria-selected="false">250 <br> Abonnés</a>
+              <a class="nav-link mt-2 mb-3" id="pills-photos-tab" data-toggle="pill" href="#pills-photos" role="tab" aria-controls="pills-photos" aria-selected="false">Photos</a>
             </li>
             <li class="nav-item col-3 menu-profil">
-              <a class="nav-link" id="pills-publications-tab" data-toggle="pill" href="#pills-publications" role="tab" aria-controls="pills-publications" aria-selected="false">620 <br> Publications</a>
+              <a class="nav-link mt-2 mb-3" id="pills-publications-tab" data-toggle="pill" href="#pills-publications" role="tab" aria-controls="pills-publications" aria-selected="false">Publications</a>
             </li>
           </ul>
-          
-          <div class="col-12 tab-content" id="pills-tabContent">
-            <div class="tab-pane fade show active" id="pills-propos" role="tabpanel" aria-labelledby="pills-propos-tab">1</div>
-            <div class="tab-pane fade" id="pills-amis" role="tabpanel" aria-labelledby="pills-amis-tab">2</div>
-            <div class="tab-pane fade" id="pills-abonnes" role="tabpanel" aria-labelledby="pills-abonnes-tab">3</div>
-            <div class="tab-pane fade" id="pills-publications" role="tabpanel" aria-labelledby="pills-publications-tab">4</div>
+        </nav>
+        <!-- FIN PHOTO ET MENU PROFIL -->
+
+        <!-- MENU PROFIL A PROPOS - A PROPOS -->
+          <div class="col-12 tab-content margin-apropos" id="pills-tabContent">
+            <div class="tab-pane fade show active" id="pills-propos" role="tabpanel" aria-labelledby="pills-propos-tab">
+              <div class="card card-size">
+                <div class="card-header fax text-right">
+                  <h1><i class="fas fa-user text-muted"></i> &Agrave; propos</h1>
+                </div>
+
+                <div class="card-body">
+
+                    <blockquote class="blockquote text-center  col-12 mb-4">
+                        <p>Le Roi des Pirates, ce sera moi !</p>
+                        <footer class="blockquote-footer">Monkey D. Luffy</footer>
+                      </blockquote>
+
+                  <h5 class="card-title text-muted mb-2 border-bottom">VILLE D'ORIGINE</h5>
+                  <p class="card-text">Village de Fuchsia, East Blue</p>
+
+                  <br>
+
+                  <h5 class="card-title text-muted mb-2 border-bottom">SITUATION AMOUREUSE</h5>
+                  <p class="card-text">Célibataire</p>
+
+                  <br>
+
+                  <h5 class="card-title text-muted mb-2 border-bottom">FAMILLE</h5>
+
+                  <ul>
+                    <li class="container">
+                      <a href="#" data-toggle="tooltip" data-placement="left" title="Voir profil" class="mb-2 mx-auto text-decoration-none " style="max-width: 200px;">
+                        <div class="row no-gutters">
+                          <div class="col-md-2 mx-auto">
+                            <img src="image/Ace profil.jpg" class="card-img mini-photo-profil rounded-circle ace" alt="Portgas D. Ace">
+                          </div>
+                          <div class="col-md-8">
+                            <div class="card-body">
+                              <p class="card-text nom-profil col-md-6">Portgas D. Ace </p>
+                              <p class="card-text col-md-6"><small class="text-muted">Frère</small></p>
+                            </div>
+                          </div>
+                        </div>
+                      </a>
+                    </li>
+
+                    <li class="container">
+                      <a href="#" data-toggle="tooltip" data-placement="left" title="Voir profil" class="mb-2 mx-auto text-decoration-none" style="max-width: 200px;">
+                        <div class="row no-gutters">
+                          <div class="col-md-2 mx-auto">
+                            <img src="image/Sabo Profil.png" class="card-img mini-photo-profil rounded-circle" alt="Portgas D. Ace">
+                          </div>
+                          <div class="col-md-8">
+                            <div class="card-body">
+                              <p class="card-text nom-profil col-md-6">Sabo </p>
+                              <p class="card-text col-md-6"><small class="text-muted">Frère</small></p>
+                            </div>
+                          </div>
+                        </div>
+                      </a>
+                    </li>
+
+                    <li class="container">
+                      <a href="#" data-toggle="tooltip" data-placement="left" title="Voir profil" class="mb-2 mx-auto text-decoration-none" style="max-width: 200px;">
+                        <div class="row no-gutters">
+                          <div class="col-md-2 mx-auto">
+                            <img src="image/ob_90f6ad85745cd9fb33aa8241a0889e5e_monkey-d-garp.png" class="card-img mini-photo-profil" alt="Monkey D. Garp">
+                          </div>
+                          <div class="col-md-8">
+                            <div class="card-body">
+                              <p class="card-text nom-profil col-md-6">Monkey D. Garp</p>
+                              <p class="card-text col-md-6"><small class="text-muted">Grand-Père</small></p>
+                            </div>
+                          </div>
+                        </div>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              
+        <!-- FIN MENU PROFIL A PROPOS - A PROPOS-->
+
+        <!-- MENU PROFIL - PHOTOS -->
+        <div class="tab-pane fade show  mt-4 active" id="pills-propos" role="tabpanel" aria-labelledby="pills-propos-tab">
+                  <div class="card card-size">
+                    <div class="card-header fax text-right">
+                       <h1><i class="far fa-image fax"></i> Photos</h1>
+                    </div><br>
+                    <div class="card-body row">
+                      <div class="col-md-3 mt-3">
+                        <img src="/image/Equipage Luffy.jpg" alt="Equipage Luffy" class="galery-photos img" data-target="#photoEquipage" data-toggle="modal">
+                        <div class="modal fade" id="photoEquipage" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered" role="document">
+                              <div class="modal-content">
+                                <div class="modal-body">
+                                    <img src="/image/Equipage Luffy.jpg" alt="Luffy & famille">
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                      </div>
+
+                      <div class="col-md-3 mt-3">
+                        <img src="/image/lucy.jpg" alt="Lucy" class="galery-photos img" data-target="#photoLucy" data-toggle="modal">
+                        <div class="modal fade" id="photoLucy" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered" role="document">
+                              <div class="modal-content">
+                                <div class="modal-body">
+                                    <img src="/image/lucy.jpg" alt="Luffy & famille">
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                      </div>
+
+                      <div class="col-md-3 mt-3">
+                        <img src="/image/Luffy sous la neige.jpg" alt="Luffy sous la neige" class="galery-photos img" data-target="#photoLuffyNeige" data-toggle="modal">
+                        <div class="modal fade" id="photoLuffyNeige" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered" role="document">
+                              <div class="modal-content">
+                                <div class="modal-body">
+                                    <img src="/image/Luffy sous la neige.jpg" alt="Luffy & famille">
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                      </div>
+
+                      <div class="col-md-3 mt-3">
+                        <img src="/image/Luffy sabo ace.jpg" alt="Ace Luffy Sabo" class="galery-photos img" data-target="#photoLSA" data-toggle="modal">
+                        <div class="modal fade" id="photoLSA" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered" role="document">
+                              <div class="modal-content">
+                                <div class="modal-body">
+                                    <img src="/image/Luffy sabo ace.jpg" alt="Luffy & famille">
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                      </div>
+
+                      <a href="#pills-photos" class="mx-auto mt-5 mb-3 text-decoration-none">Voir plus</a>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <!-- FIN MENU PROFIL - PHOTOS -->
+
+            <!-- MENU PROFIL PHOTOS - GALERIE -->
+            <div class="tab-pane fade" id="pills-amis" role="tabpanel" aria-labelledby="pills-amis-tab">...</div>
+            <div class="tab-pane fade" id="pills-photos" role="tabpanel" aria-labelledby="pills-photos-tab">...</div>
+            <div class="tab-pane fade" id="pills-publications" role="tabpanel" aria-labelledby="pills-publications-tab">...</div>
           </div>
-      
-    </nav>
 </section>
+
+    <!-- FOOTER -->
+    <footer class="text-center footer-copy">
+        <h5>
+            Copyright © 2019 - Manuel BACLET -
+        </h5>
+    </footer>
   </body>
 </html>

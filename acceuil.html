@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <link rel="icon" href="/image/UUnivers 16x16.jpg">
+    <title>Universe</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.1.1/js/all.js" integrity="sha384-BtvRZcyfv4r0x/phJt9Y9HhnN5ur1Z+kZbKVgzVBAlQZX4jvAuImlIz+bG7TS00a" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/style.css">
+
+    <!--SCRIPT JS-->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="js/app.js"></script>
+  </head>
+
+  <body>
+
+<header class="sticky-top">
+       <!-- BARRE DE NAVIGATION -->
+      <nav class="navbar navbar-expand-lg navbar-dark bg-violet rounded-bottom">
+          <div class="container">
+            <a class="navbar-brand" href="#" id="universe">
+                <img src="image/UUnivers 50x50.jpg" class="rounded-circle img">
+            </a>
+            <div id="search1">
+                <form id="mainsearch">
+                  <input type="search" placeholder="Search">
+                </form>
+            </div>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-primary" aria-controls="navbar-primary" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse sticky-top" id="navbar-primary">
+              <div class="navbar-collapse-header">
+                <div class="row">
+                  <div class="col-6 collapse-close">
+                    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-primary" aria-controls="navbar-primary" aria-expanded="false" aria-label="Toggle navigation">
+                      <span></span>
+                      <span></span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <ul class="navbar-nav ml-lg-auto">
+                <li class="mt-1 mr-3">
+                  <a href="index.html" class="text-decoration-none navigation-btn"><img src="/image/Luffy.jpg" alt="Luffy" style="max-width: 30px;" class="mr-2 rounded-circle img">Luffy</a>
+                </li>
+
+                <span class="mt-2 mr-3 text-muted media-invisible">|</span>
+
+                <li class="mt-2">
+                  <a href="#" class="text-decoration-none navigation-btn">Accueil</a>
+                </li>
+
+                <span class="mt-2 mr-3 ml-3 text-muted media-invisible">|</span>
+
+                <li class="nav-item">
+                  <a class="nav-link" href="#" data-toggle="tooltip" data-placement="top" title="Amis"><i class="fas fa-user-friends fax"></i></a>
+                </li>
+
+                <li class="nav-item">
+                  <a class="nav-link" href="#" data-toggle="tooltip" data-placement="top" title="Messages"><i class="fab fa-facebook-messenger fax"></i></a>
+                </li>
+
+                <li class="nav-item dropdown">
+                  <a class="nav-link" href="#" id="navbar-primary_dropdown_1" role="button" data-toggle="dropdown" title="Notifications" aria-haspopup="true" aria-expanded="false"><i class="fa fa-bell fax" aria-hidden="true"></i><code class="red-popin"></code></a>
+                  <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbar-primary_dropdown_1">
+                      <h4 class="mt-2 mb-2 ml-2 notif-marge">Notifications</h4>
+                      <div class="dropdown-divider"></div>
+                      <h6 class="text-muted notif-new-old">nouveau</h6>
+                      <div class="dropdown-divider"></div>
+
+                      <div class="alert alert-dark fade show" role="alert">
+                          <img src="/image/Midoriya.jpg" class="photo-profil-notif rounded-circle mr-3 img"><strong>Midoriya Izuku</strong> à ajouté une nouvelle photo.
+                          <button type="button" class="close" data-dismiss="alert" aria-label="Close" id="popin">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                        </div>
+                    <div class="dropdown-divider"></div>
+                      <h6 class="text-muted notif-new-old">ancien</h6>
+                    <div class="dropdown-divider"></div>
+                    <div class="alert alert-dismissible fade show" role="alert">
+                        <img src="/image/Trafalgar D. Water Law.jpg" alt="Trafalgar" class="photo-profil-notif rounded-circle mr-3 img">Vous avez une nouvelle suggestion d'ami:<strong> Trafalgar D. Water Law.</strong>
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="alert alert-dismissible fade show" role="alert">
+                          <img src="/image/Sabo Profil.png" alt="Sabo" class="photo-profil-notif rounded-circle mr-3 img"><strong>Sabo</strong> à mentionné votre nom dans un commentaire.<img src="/image/Luffy sabo ace.jpg" alt="Luffy sabo ace" style="max-width: 100px;" class="ml-3 img">
+                          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                    </div>
+                        <div class="dropdown-divider"></div>
+                    <a class="dropdown-item text-center" href="#">Voir tout</a>
+                  </div>
+                </li>
+
+                <li class="nav-item dropdown">
+                        <a class="nav-link" href="#" title="Paramètres" id="navbar-primary_dropdown_2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-sliders-h fax" data-toggle="tooltip"></i></a>
+                        <div class="dropdown-menu dropdown-menu-left setting-size" aria-labelledby="btnGroupDrop1">
+                            <a class="dropdown-item" href="#" data-toggle="modal" data-target="#aPropos">&Agrave; propos</a>
+                            <a class="dropdown-item" href="#">Paramètres</a>
+                            <a class="dropdown-item" href="#" data-toggle="modal" data-target="#Deco">Déconnexion</a>
+                      </li>
+                  </ul>
+                </div>
+              </div>
+              </div>
+            </nav>
+    </header>
+    
+    <div class="modal fade" id="Deco" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title mx-auto" id="exampleModalLabel">Au revoir</h5>
+            </div>
+            <div class="modal-body text-center">
+                Merci de nous avoir visité n'hésitez pas à aller visiter mon site internet <strong><a href="https://mbdev.dev" class="text-decoration-none" target="_blank">www.mbdev.dev</a></strong>
+            </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal fade" id="aPropos" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title mx-auto" id="exampleModalLabel">Bienvenue</h5>
+                    </div>
+                    <div class="modal-body text-center">
+                      Bienvenue sur <b>Universe</b> le réseau social spécialement conçu pour les héros de mangas !
+                    </div>
+                    </div>
+                  </div>
+                </div>
+        <!-- FIN BARRE DE NAVIGATION -->
+
+        <!-- DEBUT FIL D'ACTUALITE -->
+        <section class="container">
+            <header class="card card-size-fil">
+                <h5 class="card-title nom-profil mx-2 mt-2 cursor text-center like">Fil d'Actualité</h5>
+            </header>
+            <article>
+                    <div class="card card-size-fil">
+                            <h5 class="card-title nom-profil mx-2 mt-2 cursor"><img src="/image/Midoriya.jpg" class="photo-profil-notif rounded-circle mr-3">Midoriya Izuku</h5><small class="text-muted time-post mb-2">il y à 10 minutes</small>
+                            <img src="/image/Midoriya 2.jpg" class="card-img-top photo-fil-actualite" alt="...">
+                            <div class="card-body">
+                                <p class="card-text mb-1">
+                                        <a href="#" data-toggle="tooltip" title="J'aime" data-placement="top"><i class="far fa-heart fax mr-2 like"></i></a>
+                                        <a href="#" data-toggle="tooltip" title="commenter" data-placement="top"><i class="far fa-comment fax mr-2 like"></i></a>
+                                        <a href="#" data-toggle="tooltip" title="Partager" data-placement="top"><i class="far fa-share-square fax mr-2 like"></i></a>
+                                        <a href="#" data-toggle="tooltip" title="Ochaco Uraraka, All Mighty et 130 autres personnes" data-placement="top" class="text-decoration-none">132 j'aime</a>
+                                </p>
+                              <p class="card-text">
+                                     Ma tête quand on m'apprend que je vais être plus puissant que All Mighty <span>&#128170;&#127995;</span><span>&#128170;&#127995;</span><span>&#128170;&#127995;</span>&#128165; <a href="#">#Power-UP</a> <a href="#">#Yuei</a> <a href="#">#PlusUltra</a> <a href="#">#IAmDeku</a></p>
+                            </div>
+                            <small class="text-muted ml-4 mb-1 cursor">voir tout les commentaires</small>
+                            <div class="card-footer">
+                                <input type="text" class="form-control" name="" id="" aria-describedby="helpId" placeholder="Votre commentaire..">
+                            </div>
+                          </div>
+            </article>
+
+            <article>
+                    <div class="card card-size-fil">
+                            <h5 class="card-title nom-profil mx-2 mt-2 cursor"><img src="/image/Luffy.jpg" class="photo-profil-notif rounded-circle mr-3">Monkey D. Luffy</h5><small class="text-muted time-post mb-2">il y à 1 heures</small>
+                            <img src="/image/Luffy Prime.jpg" class="card-img-top photo-fil-actualite" alt="...">
+                            <div class="card-body">
+                                <p class="card-text mb-1">
+                                        <a href="#" data-toggle="tooltip" title="J'aime" data-placement="top"><i class="far fa-heart fax mr-2 like" id="like"></i></a>
+                                        <a href="#" data-toggle="tooltip" title="commenter" data-placement="top"><i class="far fa-comment fax mr-2 like"></i></a>
+                                        <a href="#" data-toggle="tooltip" title="Partager" data-placement="top"><i class="far fa-share-square fax mr-2 like"></i></a>
+                                        <a href="#" data-toggle="tooltip" title="Shanks le roux et 85 autres personnes" data-placement="top" class="text-decoration-none">86 j'aime</a>
+                                </p>
+                              <p class="card-text">
+                                     <a href="#">@shanksleroux</a> Nouvelle Prime &#x1F525;&#x1F525;&#x1F525; On arrête pas le progrès ! &#x1F601;&#x1F601;&#x1F601;<a href="#">#Piraterie</a> <a href="#">#RoiDesPirates</a> <a href="#">#Plus Ultra</a> <a href="#">#BountyGoal</a> <a href="#">#Itadakimasu</a></p>
+                            </div>
+                            <small class="text-muted ml-4 mb-1 cursor">voir tout les commentaires</small>
+                            <div class="card-footer">
+                                <input type="text" class="form-control" name="commentaire" id="comment" aria-describedby="helpId" placeholder="Votre commentaire..">
+                            </div>
+                          </div>
+            </article>
+
+            <article>
+                    <div class="card card-size-fil">
+                            <h5 class="card-title nom-profil mx-2 mt-2 cursor"><img src="/image/Avatar_edward.png" class="photo-profil-notif rounded-circle mr-3">Edward Elric</h5><small class="text-muted time-post mb-2">il y à 3 heures</small>
+                            <img src="/image/Eward et Alphonse.jpg" class="card-img-top photo-fil-actualite" alt="...">
+                            <div class="card-body">
+                                <p class="card-text mb-1">
+                                        <a href="#" data-toggle="tooltip" title="J'aime" data-placement="top"><i class="far fa-heart fax mr-2 like" id="like"></i></a>
+                                        <a href="#" data-toggle="tooltip" title="commenter" data-placement="top"><i class="far fa-comment fax mr-2 like"></i></a>
+                                        <a href="#" data-toggle="tooltip" title="Partager" data-placement="top"><i class="far fa-share-square fax mr-2 like"></i></a>
+                                        <a href="#" data-toggle="tooltip" title="Envy et 76 autres personnes" data-placement="top" class="text-decoration-none">77 j'aime</a>
+                                </p>
+                              <p class="card-text ">
+                                     Petite photo avec le petit frère &#x1F601;<span>&#128170;&#127995;</span><span>&#128170;&#127995;</span><span>&#128170;&#127995;</span>&#128303; <a href="#">#Nostalgie</a> <a href="#">#Chill</a> <a href="#">#Brotherhood</a> <a href="#">#EchangeEquivalent</a></p>
+                            </div>
+                            <small class="text-muted ml-4 mb-1 cursor">voir tout les commentaires</small>
+                            <div class="card-footer">
+                                <input type="text" class="form-control" name="" id="" aria-describedby="helpId" placeholder="Votre commentaire..">
+                            </div>
+                          </div>
+            </article>
+
+        <div class="voir">
+
+            <article>
+                    <div class="card card-size-fil">
+                            <h5 class="card-title nom-profil mx-2 mt-2 cursor"><img src="/image/Sabo Profil.png" class="photo-profil-notif rounded-circle mr-3">Sabo</h5><small class="text-muted time-post mb-2">il y à 1 jours</small>
+                            <div class="embed-responsive embed-responsive-4by3">
+                                    <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/N-Ccg9kisXI?start=547" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                            <div class="card-body">
+                                <p class="card-text mb-1">
+                                        <a href="#" data-toggle="tooltip" title="J'aime" data-placement="top"><i class="far fa-heart fax mr-2 like" id="like"></i></a>
+                                        <a href="#" data-toggle="tooltip" title="commenter" data-placement="top"><i class="far fa-comment fax mr-2 like"></i></a>
+                                        <a href="#" data-toggle="tooltip" title="Partager" data-placement="top"><i class="far fa-share-square fax mr-2 like"></i></a>
+                                        <a href="#" data-toggle="tooltip" title="Gold D. Roger et 391 autres personnes" data-placement="top" class="text-decoration-none">392 j'aime</a>
+                                </p>
+                              <p class="card-text ">
+                                     Ils on mit le feu ! On dirai que je suis plus le seul à avoir le Mera Mera no Mi &#x1F525;&#x1F525;&#127822;&#x1F525;&#x1F525; <a href="#">#Enfance</a> <a href="#">#Brother</a> <a href="#">#FamilyPirate</a></p>
+                            </div>
+                            <small class="text-muted ml-4 mb-1 cursor">voir tout les commentaires</small>
+                            <div class="card-footer">
+                                <input type="text" class="form-control" name="" id="" aria-describedby="helpId" placeholder="Votre commentaire..">
+                            </div>
+                          </div>
+            </article>
+
+            <article>
+                    <div class="card card-size-fil">
+                            <h5 class="card-title nom-profil mx-2 mt-2 cursor"><img src="/image/Luffy.jpg" class="photo-profil-notif rounded-circle mr-3">Monkey D. Luffy</h5><small class="text-muted time-post mb-2">il y à 2 jours</small>
+                            <img src="/image/Equipage Luffy.jpg" class="card-img-top photo-fil-actualite" alt="...">
+                            <div class="card-body">
+                                <p class="card-text mb-1">
+                                        <a href="#" data-toggle="tooltip" title="J'aime" data-placement="top"><i class="far fa-heart fax mr-2 like" id="like"></i></a>
+                                        <a href="#" data-toggle="tooltip" title="commenter" data-placement="top"><i class="far fa-comment fax mr-2 like"></i></a>
+                                        <a href="#" data-toggle="tooltip" title="Partager" data-placement="top"><i class="far fa-share-square fax mr-2 like"></i></a>
+                                        <a href="#" data-toggle="tooltip" title="Big Mom, Kaido, Tony Tony Chopper et 128 autres personnes" data-placement="top" class="text-decoration-none">131 j'aime</a>
+                                </p>
+                              <p class="card-text">
+                                     L'équipage au grand complet ! &#128128;&#x1F525;&#x1F525;&#x1F525; <a href="#">#LaPiraterieN'estJamaisFini</a> <a href="#">#RoiDesPirates</a> <a href="#">#ShinSekai</a> <a href="#">#EastBlue</a> <a href="#">#Niku</a></p>
+                            </div>
+                            <small class="text-muted ml-4 mb-1 cursor">voir tout les commentaires</small>
+                            <div class="card-footer">
+                                <input type="text" class="form-control" name="commentaire" id="comment" aria-describedby="helpId" placeholder="Votre commentaire..">
+                            </div>
+                          </div>
+            </article>
+
+                <article >
+                    <div class="card card-size-fil">
+                            <h5 class="card-title nom-profil mx-2 mt-2 cursor"><img src="/image/overlord profil.jpeg" class="photo-profil-notif rounded-circle mr-3">Ainz Ooal Gown</h5><small class="text-muted time-post mb-2">il y à 2 jours</small>
+                            <img src="/image/400x230_overlord-s03e08_5b8632fabfef1.jpg" class="card-img-top photo-fil-actualite" alt="...">
+                            <div class="card-body">
+                                <p class="card-text mb-1">
+                                        <a href="#" data-toggle="tooltip" title="J'aime" data-placement="top"><i class="far fa-heart fax mr-2 like" id="like"></i></a>
+                                        <a href="#" data-toggle="tooltip" title="commenter" data-placement="top"><i class="far fa-comment fax mr-2 like"></i></a>
+                                        <a href="#" data-toggle="tooltip" title="Partager" data-placement="top"><i class="far fa-share-square fax mr-2 like"></i></a>
+                                        <a href="#" data-toggle="tooltip" title="Albedo, Shalltear, Cocytus, Sebas Tian et 18 autres personnes" data-placement="top" class="text-decoration-none">22 j'aime</a>
+                                </p>
+                              <p class="card-text">
+                                     Toujours bloqué dans ce foutu jeu... &#128555;&#128555;&#128128;&#128128;<a href="#">#VDM</a> <a href="#">#TombeauDeNazarick</a> <a href="#">#AinzSama</a> <a href="#">#Momonanga</a></p>
+                            </div>
+                            <small class="text-muted ml-4 mb-1 cursor">voir tout les commentaires</small>
+                            <div class="card-footer">
+                                <input type="text" class="form-control" name="commentaire" id="comment" aria-describedby="helpId" placeholder="Votre commentaire..">
+                            </div>
+                          </div>
+            </article>
+
+            <article>
+                    <div class="card card-size-fil">
+                            <h5 class="card-title nom-profil mx-2 mt-2 cursor"><img src="/image/Sabo Profil.png" class="photo-profil-notif rounded-circle mr-3">Sabo</h5><small class="text-muted time-post mb-2">il y à 3 jours</small>
+                            <img src="/image/Luffy sabo ace.jpg" class="card-img-top photo-fil-actualite" alt="...">
+                            <div class="card-body">
+                                <p class="card-text mb-1">
+                                        <a href="#" data-toggle="tooltip" title="J'aime" data-placement="top"><i class="far fa-heart fax mr-2 like"></i></a>
+                                        <a href="#" data-toggle="tooltip" title="commenter" data-placement="top"><i class="far fa-comment fax mr-2 like"></i></a>
+                                        <a href="#" data-toggle="tooltip" title="Partager" data-placement="top"><i class="far fa-share-square fax mr-2 like"></i></a>
+                                        <a href="#" data-toggle="tooltip" title="Envy et 76 autres personnes" data-placement="top" class="text-decoration-none">77 j'aime</a>
+                                </p>
+                              <p class="card-text ">
+                                     Souvenir de la fratrie RIP Ace &#x1F525;&#128546;&#128546; <a href="#">#Enfance</a> <a href="#">#Brother</a> <a href="#">#FamilyPirate</a></p>
+                            </div>
+                            <small class="text-muted ml-4 mb-1 cursor">voir tout les commentaires</small>
+                            <div class="card-footer">
+                                <input type="text" class="form-control" name="" id="" aria-describedby="helpId" placeholder="Votre commentaire..">
+                            </div>
+                          </div>
+            </article>
+        </div>
+        
+        </section>
+    <div class="text-center">
+        <button type="button" class="btn-2 btn icon-down" id="showMore"><span>voir plus</span></button>
+    </div>
+    <!-- FIN FIL D'ACTUALITE -->
+
+    <!-- FOOTER -->
+        <footer class="text-center footer-copy">
+                <h5>
+                    Copyright © 2019 - Manuel BACLET -
+                </h5>
+            </footer>
+  </body>
+  </html>

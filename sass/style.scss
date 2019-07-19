@@ -1,22 +1,42 @@
 @import "libs/reset";
 @import "libs/responsive";
+$navigation: rgb(42, 129, 216);
+$principal-color: rgb(101, 77, 168);
+//GENERAL
 
-img{
-  border: .3mm black solid;
+html, body{
+  margin: 0;
+  background-color: rgb(238, 238, 238);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+a{
+  text-decoration: none;
+}
+.img{
   box-shadow: 1px 1px 10px grey;
 }
 
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(168, 48, 48, 0.5);
+  }
+  70%, 100% {
+    box-shadow: 0 0 0 10px rgba(168, 48, 48, 0);
+  }
+}
+
+@keyframes popin {
+  100%{
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    -o-transform: scale(1);
+    -moz-transform: scale(1);
+  }
+}
 // HEADER - NAVIGATION
-
-    html, body{
-        margin: 0;
-        background-color: rgb(238, 238, 238);
+    .bg-violet{
+      background-color: $principal-color;
     }
-
-    header{
-        padding: 0;
-    }
-
     nav-color{
         border-color: transparent;
     }
@@ -26,11 +46,11 @@ img{
       }
       
       nav a {
-        color: #69C;
+        color: $principal-color;
         text-decoration: none;
         transition: all .3s;
         &:hover {
-          color: #F60;
+          color: darken($principal-color, 20%);
           transition: all .3s;
         }
       }
@@ -62,20 +82,22 @@ img{
         width: 15px;
         color: transparent;
         cursor: pointer;
-        background: #ededed url(https://static.tumblr.com/ftv85bp/MIXmud4tx/search-icon.png) no-repeat 10px center;
-        border: solid 2px #ccc;
+        background: transparent url(https://static.tumblr.com/ftv85bp/MIXmud4tx/search-icon.png) no-repeat 10px center;
+        border: solid 0px #ccc;
         padding: 9px 12px 9px 10px;
         -webkit-transition: all .5s;
         -moz-transition: all .5s;
         transition: all .5s;
+        border-radius: 20px;
         &:hover {
-          background-color: rgb(86, 165, 211);
+          box-shadow: 0px 0px 10px black;
         }
         &:focus {
-          width: 130px;
+          width: 250px;
           color: #000;
           cursor: auto;
-          background: #fff url(https://static.tumblr.com/ftv85bp/MIXmud4tx/search-icon.png) no-repeat 124px center;
+          background: #fff url(https://static.tumblr.com/ftv85bp/MIXmud4tx/search-icon.png) no-repeat 240px center;
+          box-shadow: 0px 0px 10px black;
         }
       }
     
@@ -94,6 +116,7 @@ img{
       .notif-marge{
         font-size: 22px;
         padding-left: 10px;
+        margin: 10px;
       }
 
       .notif-new-old{
@@ -105,17 +128,40 @@ img{
         width: 70vh;
       }
       .setting-size{
-        width: 15vh;
+        width: 16vh;
+      }
+
+      .photo-profil-notif{
+      width: 50px;
+      height: 50px;
+      border-radius: 50px;
+      }
+
+      .navigation-btn{
+        font-weight: bolder;
+        color: rgba(255, 255, 255, 0.555);
+        &:hover{
+          color: rgba(255, 255, 255, 0.842);
+        }
+      }
+
+      @media #{$medium-down}{
+        .media-invisible{
+          visibility: hidden;
+        }
       }
 // FIN HEADER - NAVIGATION
 
 // BARRE NAVIGATION PROFIL
+      
       .couverture{
         z-index: 0;
         margin: auto;
         display: block;
-        width: 900px;
-        height: 500px;
+        width: 920px;
+        height: 700px;
+        border: 0.5mm solid black;
+        cursor: pointer;
       }
 
       .menu-couverture{
@@ -129,23 +175,246 @@ img{
 
       .menu-profil{
         border-bottom: 0.1mm solid lightgray;
+        transition: .2s all;
+        font-weight: bolder;
         &:hover{
-            border-bottom:1mm solid #ffae82;
+            border-bottom:0.5mm solid $principal-color;
+            transition: .2s all;
       }
 }
+      .mini-photo-profil{
+        height: 100px;
+        width: 100px;
+        border-radius: 50px;
+        border: 1mm solid rgb(201, 201, 201);
+        &:hover{
+          border: 1mm solid lighten(rgb(201, 201, 201) ,20%);
+          transition: .2s all;
+        }
+      }
       #photo-profil{
         border: 2mm solid white;
-        display: block;
-        margin: -75px 0px 0px 45px;
+        margin: -75px 0px 0px 65px;
         width: 150px;
         height: 150px;
+        cursor: pointer;
       }
 
       .pseudo-profil{
         margin:auto;
         margin-left: 20vh;
       }
+// FIN BARRE NAVIGATION PROFIL
 
+// A PROPOS & PHOTOS
+      .ace:hover{
+        animation: pulse ease-out 2s forwards infinite;
+        -moz-animation: pulse ease-out 2s forwards infinite;
+        -o-animation: pulse ease-out 2s forwards infinite;
+        -webkit-animation: pulse ease-out 2s forwards infinite;
+        filter: grayscale(1);
+        transition: .2s all;
+        -webkit-transition: 2s all;
+      }
+      .card-size{
+        width: 1000px; 
+        margin: auto;
+      }
+
+      .nom-profil{
+        font-size: 20px;
+        font-weight: bolder;
+      }
+      .margin-apropos{
+        margin-top: 100px;
+      }
+
+      .card-title{
+        font-size: 18px;
+      }
       nav ul li h2{
         font-size: 30px;
+        font-weight: bolder;
+        color: rgb(75, 75, 75);
       }
+
+      .text-right{
+        float: left;
+        display: flex;
+      }
+
+      .galery-photos{
+        height: 200px;
+        width: 250px;
+        cursor: pointer;
+      }
+
+      .like:hover{
+        color: $principal-color;
+        }
+
+      .red-popin{
+        display: block;
+        width: 8px;
+        height: 8px;
+        background: rgb(201, 44, 44);
+        border-radius: 50%;
+        position: absolute;
+        top: 8px;
+        right: 8px;
+        z-index: 99;
+        transform-origin: center;
+        -o-transform-origin: center;
+        -moz-transform-origin: center;
+        -webkit-transform-origin: center;
+        transform: scale(0);
+        -moz-transform: scale(0);
+        -o-transform: scale(0);
+        -webkit-transform: scale(0);
+        animation: popin .3s ease-in forwards;
+      }
+// FIN A PROPOS & PHOTOS
+
+// FIL D'ACTUALITE
+
+.card-size-fil{
+  width: 600px; 
+  margin: 10px auto;
+}
+
+.photo-fil-actualite{
+  box-shadow: .2px .2px 0.2px .2px grey;
+}
+.cursor{
+  cursor: pointer;
+}
+
+.time-post{
+  margin: -28px 0px 0px 75px;
+}
+
+
+.btn {
+	font-family: 'Lato', Calibri, verdana, sans-serif;
+  font-weight: bolder;
+  border: none;
+	color: #000;
+  text-decoration: none;
+}
+
+button.btn{
+  width: 300px;
+  text-transform: uppercase;
+  padding: 25px 80px;
+	margin: 15px 30px;
+  overflow: hidden;
+  position: relative;
+  background: transparent;
+  margin: auto;
+}
+button:before {
+  	left: 48%;
+}
+button:active {
+  transition: 0.1s all;
+}
+button > span {
+	display: inline-block;
+	transition: all 0.3s;
+}
+.icon-down:before {
+  content: "↓";
+  position: absolute;
+}
+
+.btn-2:before {
+	top: -100%;
+  transition: all 0.3s;
+}
+.btn-2:hover:before {
+	top: 30%;
+}
+.btn-2:hover > span {
+	transform: translateY(300%);
+}
+// FOOTER
+.footer-copy{
+  background: rgb(36, 36, 36);
+  padding: 10px 0 10px;
+  color: white;
+}
+// FIN FOOTER
+
+// VERSION MOBILE - PAGE PROFIL
+
+@media #{$medium-down}{
+  #photo-profil{
+    border: 2mm solid white;
+    margin: -75px 0px 0px 20px;
+    width: 150px;
+    height: 150px;
+    cursor: pointer;
+  }
+
+  .pseudo-profil{
+    margin:auto;
+    margin-left: 5vh;
+    font-size: 10px;
+  }
+  
+  .nom-profil{
+    font-size: 15px;
+    font-weight: bolder;
+  }
+
+  .mini-photo-profil{
+    height: 60px;
+    width: 60px;
+    border-radius: 50px;
+    border: 1mm solid rgb(201, 201, 201);
+    &:hover{
+      border: 1mm solid lighten(rgb(201, 201, 201) ,20%);
+      transition: .3s all;
+    }
+  }
+    .card-size{
+      width: 370px; 
+      margin: auto;
+    }
+
+    .margin-apropos{
+      margin-top: 135px;
+    }
+
+    .card-title{
+      font-size: 18px;
+    }
+
+    li.container{
+      margin: 10px auto;
+    }
+
+    .menu-profil{
+      border-bottom: 0.1mm solid $principal-color;
+      transition: .2s all;
+      font-weight: bolder;
+      font-size: 1px;
+      &:hover{
+          border-bottom:0.5mm solid $principal-color;
+          transition: .2s all;
+      }
+    }
+
+    .galery-photos{
+      height: 200px;
+      width: 350px;
+      cursor: pointer;
+    }
+
+    //VERSION MOBIL - PAGE ACCUEIL
+
+    .card-size-fil{
+      width: 300px; 
+      margin: 10px auto;
+    }
+}
